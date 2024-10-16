@@ -1,7 +1,6 @@
-import 'package:bookly_app/core/utlis/assets.dart';
-import 'package:bookly_app/features/home/data/presentation/views/home_view_body.dart';
+
+import 'package:bookly_app/features/home/data/presentation/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
