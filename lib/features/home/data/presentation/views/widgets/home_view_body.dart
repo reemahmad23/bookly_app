@@ -25,6 +25,9 @@ class HomeViewBody extends StatelessWidget {
           Text('Best Seller',
           style: Styles.textStyle18,
           ),
+          SizedBox(
+            height: 10,
+          ),
           BestSellerListViewItem(),
       
         ],
@@ -56,6 +59,21 @@ class BestSellerListViewItem extends StatelessWidget {
             ),
           ),
         ),
+      ),
+      SizedBox(
+        width: 30,
+      ),
+      Column(
+        children: [
+          SizedBox(
+            width: MediaQuery.of(context).size.width * .5,
+            child: Text('Amarita and No bt3m el flmnko',
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: Styles.textStyle20,
+            ),
+          ),
+        ],
       ),
         ],
       ),
