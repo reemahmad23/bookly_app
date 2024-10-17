@@ -11,11 +11,12 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         CustomAppBar(),
         FeaturedBooksListView(),
         SizedBox(
-          height: 50,
+          height: 20,
         ),
         Text('Best Seller'),
 
