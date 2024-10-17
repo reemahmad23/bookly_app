@@ -1,6 +1,7 @@
 
 
 import 'package:bookly_app/core/utlis/assets.dart';
+import 'package:bookly_app/core/utlis/styles.dart';
 import 'package:bookly_app/features/home/data/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly_app/features/home/data/presentation/views/widgets/custom_list_view_item.dart';
 import 'package:bookly_app/features/home/data/presentation/views/widgets/featured_books_ist_view.dart';
@@ -21,7 +22,9 @@ class HomeViewBody extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Text('Best Seller'),
+          Text('Best Seller',
+          style: Styles.textStyle18,
+          ),
           BestSellerListViewItem(),
       
         ],
