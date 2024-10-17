@@ -1,5 +1,6 @@
 
 
+import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utlis/assets.dart';
 import 'package:bookly_app/core/utlis/styles.dart';
 import 'package:bookly_app/features/home/data/presentation/views/widgets/custom_app_bar.dart';
@@ -64,15 +65,35 @@ class BestSellerListViewItem extends StatelessWidget {
         width: 30,
       ),
       Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
             width: MediaQuery.of(context).size.width * .5,
             child: Text('Amarita and No bt3m el flmnko',
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style: Styles.textStyle20,
+            style: Styles.textStyle20.copyWith(
+              fontFamily: kGtSectraFine),
             ),
           ),
+          const SizedBox(
+              height: 3,
+            ),
+
+            Text('Mohammed Taha',
+            style: Styles.textStyle14,
+            ),
+            const SizedBox(
+              height: 3,
+            ),
+            Row(
+              children: [
+                Text('19.9D',
+                style: Styles.textStyle20.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),),
+              ],
+            )
         ],
       ),
         ],
