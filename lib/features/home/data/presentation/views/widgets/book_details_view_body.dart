@@ -12,63 +12,72 @@ class BookDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-      child: Column(
-        children: [
-          const CustomBookDetailsAppBar(),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * .34),
-            child: const CustomListViewItem(),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text('Amarita & Zicola',
-          style: Styles.textStyle30,
-          ),
-          SizedBox(
-            height: 3,
-          ),
-          Opacity(
-            opacity: .7,
-            child: Text('Amr Abdelhamied',
-            style: Styles.textStyle18.copyWith(
-            fontStyle: FontStyle.italic,
-            fontWeight: FontWeight.w500,
+    return CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        child: Column(
+          children: [
+            const CustomBookDetailsAppBar(),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: width * .34),
+              child: const CustomListViewItem(),
             ),
+            SizedBox(
+              height: 10,
             ),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          BookRating(
-            mainAxisAlignment: MainAxisAlignment.center,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          BookAction(),
-          SizedBox(
-            height: 20,
-          ),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Text('You Can Also Like',
-            style: Styles.textStyle14.copyWith(
-              fontWeight: FontWeight.bold,
+            Text('Amarita & Zicola',
+            style: Styles.textStyle30,
             ),
+            SizedBox(
+              height: 3,
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          SimilarBooksListView(),
-          SizedBox(
-            height: 20,
-          ),
-        ],
+            Opacity(
+              opacity: .7,
+              child: Text('Amr Abdelhamied',
+              style: Styles.textStyle18.copyWith(
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w500,
+              ),
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            BookRating(
+              mainAxisAlignment: MainAxisAlignment.center,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            BookAction(),
+            Expanded(
+              child: SizedBox(
+                height: 20,
+              ),
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text('You Can Also Like',
+              style: Styles.textStyle14.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            SimilarBooksListView(),
+            SizedBox(
+              height: 20,
+            ),
+          ],
+        ),
       ),
+    ),
+    ],
     );
   }
 }
