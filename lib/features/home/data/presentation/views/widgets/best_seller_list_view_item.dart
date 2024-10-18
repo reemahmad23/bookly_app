@@ -4,7 +4,6 @@ import 'package:bookly_app/core/utlis/app_router.dart';
 import 'package:bookly_app/core/utlis/assets.dart';
 import 'package:bookly_app/core/utlis/styles.dart';
 import 'package:bookly_app/features/home/data/presentation/views/widgets/book_rating.dart';
-import 'package:bookly_app/features/home/data/presentation/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
