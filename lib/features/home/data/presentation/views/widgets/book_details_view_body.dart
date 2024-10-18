@@ -1,4 +1,5 @@
 import 'package:bookly_app/core/utlis/styles.dart';
+import 'package:bookly_app/features/home/data/presentation/views/widgets/book_rating.dart';
 import 'package:bookly_app/features/home/data/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:bookly_app/features/home/data/presentation/views/widgets/custom_list_view_item.dart';
 import 'package:flutter/material.dart';
@@ -19,13 +20,13 @@ class BookDetailsViewBody extends StatelessWidget {
             child: const CustomListViewItem(),
           ),
           SizedBox(
-            height: 20,
+            height: 10,
           ),
           Text('Amarita & Zicola',
           style: Styles.textStyle30,
           ),
           SizedBox(
-            height: 5,
+            height: 3,
           ),
           Opacity(
             opacity: .7,
@@ -35,6 +36,12 @@ class BookDetailsViewBody extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
             ),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          BookRating(
+            mainAxisAlignment: MainAxisAlignment.center,
           ),
         ],
       ),
