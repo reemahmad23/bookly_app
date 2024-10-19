@@ -16,23 +16,23 @@ class BookAction extends StatelessWidget {
               textColor: Colors.black,
               backgroundColor: Colors.white,
               borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(16),
-              bottomLeft: Radius.circular(16),
+                topLeft: Radius.circular(16),
+                bottomLeft: Radius.circular(16),
               ),
             ),
-            ),
-            Expanded(
+          ),
+          Expanded(
             child: CustomButton(
               fontSize: 16,
               text: 'Free Preview',
               textColor: Colors.white,
               backgroundColor: Color(0xffEF8252),
               borderRadius: BorderRadius.only(
-              topRight: Radius.circular(16),
-              bottomRight: Radius.circular(16),
+                topRight: Radius.circular(16),
+                bottomRight: Radius.circular(16),
               ),
             ),
-            ),
+          ),
         ],
       ),
     );

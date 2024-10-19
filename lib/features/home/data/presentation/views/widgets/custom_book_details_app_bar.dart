@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomBookDetailsAppBar extends StatelessWidget {
@@ -12,13 +11,11 @@ class CustomBookDetailsAppBar extends StatelessWidget {
         IconButton(
           onPressed: () {},
           icon: Icon(Icons.close),
-          ),
-
-          IconButton(
+        ),
+        IconButton(
           onPressed: () {},
           icon: Icon(Icons.shopping_cart_outlined),
-          ),
-          
+        ),
       ],
     );
   }

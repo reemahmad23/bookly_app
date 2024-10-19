@@ -1,4 +1,3 @@
-
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utlis/app_router.dart';
 import 'package:bookly_app/core/utlis/assets.dart';
@@ -14,7 +13,7 @@ class BestSellerListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-      GoRouter.of(context).push(AppRouter.kBookDetailsView);
+        GoRouter.of(context).push(AppRouter.kBookDetailsView);
       },
       child: SizedBox(
         height: 125,
@@ -23,59 +22,59 @@ class BestSellerListViewItem extends StatelessWidget {
           child: Row(
             children: [
               AspectRatio(
-            aspectRatio: 2.5/4 ,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                image: DecorationImage(
-                  fit: BoxFit.fill ,
-                  image: AssetImage(
-                    AssetsDate.textImage
+                aspectRatio: 2.5 / 4,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image: AssetImage(AssetsDate.textImage),
                     ),
+                  ),
                 ),
               ),
-            ),
-          ),
-          SizedBox(
-            width: 30,
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * .5,
-                  child: Text('Amarita and No bt3m el flmnko',
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: Styles.textStyle20.copyWith(
-                    fontFamily: kGtSectraFine),
-                  ),
+              SizedBox(
+                width: 30,
+              ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * .5,
+                      child: Text(
+                        'Amarita and No bt3m el flmnko',
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: Styles.textStyle20
+                            .copyWith(fontFamily: kGtSectraFine),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 3,
+                    ),
+                    Text(
+                      'Mohammed Taha',
+                      style: Styles.textStyle14,
+                    ),
+                    const SizedBox(
+                      height: 3,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          '19.9D',
+                          style: Styles.textStyle20.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Spacer(),
+                        BookRating(),
+                      ],
+                    )
+                  ],
                 ),
-                const SizedBox(
-                    height: 3,
-                  ),
-            
-                  Text('Mohammed Taha',
-                  style: Styles.textStyle14,
-                  ),
-                  const SizedBox(
-                    height: 3,
-                  ),
-                  Row(
-                    children: [
-                      Text('19.9D',
-                      style: Styles.textStyle20.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
-                      ),
-                      Spacer(),
-                      BookRating(),
-                    ],
-                  )
-              ],
-            ),
-          ),
+              ),
             ],
           ),
         ),

@@ -14,32 +14,28 @@ class SplashViewBody extends StatefulWidget {
   State<SplashViewBody> createState() => _SplashViewBodyState();
 }
 
-class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProviderStateMixin {
+class _SplashViewBodyState extends State<SplashViewBody>
+    with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
-  
+
   @override
-  void initState(){
+  void initState() {
     super.initState();
 
     initSlidingAnimation();
 
     navigateToHome();
-
   }
 
-  
-
-
-  void dispose()
-  {
+  void dispose() {
     super.dispose();
   }
+
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
-
       children: [
         Image.network(AssetsDate.logo),
         SizedBox(
@@ -47,19 +43,19 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
         ),
         SlidingText(slidingAnimation: slidingAnimation),
       ],
-      
     );
   }
-  
+
   void initSlidingAnimation() {
     animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),
-      );
-    
-    slidingAnimation = Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero)
-    .animate(animationController);
-    
+    );
+
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero)
+            .animate(animationController);
+
     animationController.forward();
   }
 
