@@ -22,7 +22,12 @@ class HomeRepoImplementation implements HomeRepo{
 
       return right(books);
     } on Exception catch (e) {
-      return left(ServerFailure());
+      if (e is DioException ) {
+        return left(ServerFailure.fromDioExp(e));;
+      }
+
+      return left(ServerFailure(e.toString()));
+
     }
   }
 
