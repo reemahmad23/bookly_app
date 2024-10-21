@@ -16,7 +16,7 @@ class SlidingText extends StatelessWidget {
           return SlideTransition(
             position: slidingAnimation,
             child: Text(
-              'Read Free Books',
+              'Welcome in your home',
               textAlign: TextAlign.center,
             ),
           );
